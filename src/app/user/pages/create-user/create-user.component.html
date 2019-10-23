@@ -1,0 +1,20 @@
+<div class="create-user">
+  <h3>{{ title }}</h3>
+
+  <form [formGroup]="userform" (ngSubmit)="onFormSubmit()">
+    <div class="form-group">
+      <input type="text" class="form-control" name="email" [ngClass]="{ invalid: f.email.errors && f.email.touched }" formControlName="email"
+        placeholder="email" />
+    </div>
+
+    <div class="form-group">
+      <input type="text" class="form-control" name="firstname" formControlName="firstname" placeholder="first name" />
+    </div>
+
+    <div class="form-group">
+      <input type="text" class="form-control" name="lastname" formControlName="lastname" placeholder="last name" />
+    </div>
+    <button class="btn btn-primary" [disabled]="!userform.valid">Submit</button>
+    <!--  -->
+  </form>
+</div>

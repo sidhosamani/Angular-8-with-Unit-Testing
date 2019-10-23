@@ -1,0 +1,23 @@
+<app-create-user></app-create-user>
+
+<div class="list-user">
+    <h3>{{ title }}</h3>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Email</th>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of userlist; let i = index">
+                <th scope="row">{{i+1}}</th>
+                <td>{{user.email}}</td>
+                <td>{{user.firstname}}</td>
+                <td>{{user.lastname}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
